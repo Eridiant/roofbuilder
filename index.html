@@ -20,7 +20,6 @@
   <meta name="theme-color" content="#ffffff">
 
 	<meta property="og:image" content="images/dist/preview.jpg">
-	
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -72,8 +71,67 @@
         </p>
       </div>
     </div>
-    <div class="header-video">
-      <iframe id="ytplayer" type="text/html" width="100%" height="100%" src="https://www.youtube.com/embed/J7o0yB2y-po?autoplay=1&loop=1" allowfullscreen></iframe>
+    <div class="header-wrap" style="max-width: 1100px; margin: auto">
+      <div class="header-video">
+        <iframe id="ytplayer" type="text/html" width="100%" height="100%" src="https://www.youtube.com/embed/J7o0yB2y-po?autoplay=1&loop=1" allowfullscreen></iframe>
+      </div>
+      <div class="header-form">
+        <div class="header-form-title">
+          Научись играть в плюс!
+        </div>
+        <form action="#" id="form" method="POST">
+          <div class="p-floating-container">
+            <input class="form-input" type="text" name="name" placeholder="Name" required />
+            <label>Name</label>
+          </div>
+          <div class="p-floating-container">
+            <input class="form-input" type="email" name="email" placeholder="Email" required />
+            <label>Email</label>
+          </div>
+          <div class="form-wrapper">
+            <div class="form-inner">
+              <div id="form-choice" class="form-choice">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M473.655 88.276H38.345C17.167 88.276 0 105.443 0 126.621v73.471h512v-73.471c0-21.178-17.167-38.345-38.345-38.345z" fill="#f5f5f5"/><path d="M0 385.379c0 21.177 17.167 38.345 38.345 38.345h435.31c21.177 0 38.345-17.167 38.345-38.345v-73.471H0v73.471z" fill="#ff4b55"/><path fill="#41479b" d="M0 200.09h512V311.9H0z"/></svg>
+                +7
+              </div>
+              <div id="form-dropdown" class="form-dropdown">
+                <div class="form-item" data-lang="ru">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M473.655 88.276H38.345C17.167 88.276 0 105.443 0 126.621v73.471h512v-73.471c0-21.178-17.167-38.345-38.345-38.345z" fill="#f5f5f5"/><path d="M0 385.379c0 21.177 17.167 38.345 38.345 38.345h435.31c21.177 0 38.345-17.167 38.345-38.345v-73.471H0v73.471z" fill="#ff4b55"/><path fill="#41479b" d="M0 200.09h512V311.9H0z"/></svg>
+                  +7
+                </div>
+                <div class="form-item" data-lang="ua">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M0 385.379c0 21.177 17.167 38.345 38.345 38.345h435.31c21.177 0 38.345-17.167 38.345-38.345V256H0v129.379z" fill="#ffe15a"/><path d="M473.655 88.276H38.345C17.167 88.276 0 105.443 0 126.621V256h512V126.621c0-21.178-17.167-38.345-38.345-38.345z" fill="#4173cd"/></svg>
+                  +3
+                </div>
+              </div>
+            </div>
+            <input id="phonecc" type="hidden">
+            <div class="p-floating-container">
+              <input id="phone" class="form-input" type="tel" name="phone" pattern="(\+?\d[- .]*){7,15}" placeholder="Telephone" required />
+              <label>Telephone</label>
+            </div>
+          </div>
+          <button type="submit" class="form-btn">Получить курс</button>
+          <div class="form-check">
+            <input id="form-check" type="checkbox" checked>
+            <label for="form-check">даю согласие на обработку персональных данных</label>
+          </div>
+        </form>
+        <div class="header-send">
+          <div class="header-send-inner">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93 94" width="93" height="94">
+              <image  width="93" height="94" id="img1" href="data:image/png;base64,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"/>
+              <use id="Layer 10" href="#img1" x="0" y="0" />
+            </svg>
+            <div class="header-send-title">
+              Курс отправлен
+            </div>
+            <div class="header-send-text">
+              проверь почту!
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="header-inner" style="max-width: 1100px; margin: auto">
       <div class="header-caption">
@@ -198,7 +256,9 @@
   </div>
 </footer>
 
-	<script src="js/app.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="js/app.min.js"></script>
 
 </body>
 </html>
