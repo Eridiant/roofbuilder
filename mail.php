@@ -3,6 +3,7 @@
 $name = htmlspecialchars($_POST['name']);
 $email = htmlspecialchars($_POST['email']);
 $phone = htmlspecialchars($_POST['phone']);
+$phonecc = htmlspecialchars($_POST['phonecc']);
 
 $URL ='https://api.getresponse.com/v3/from-fields';
 $token = 'api-key ea6qdvnwbg9s5eajs05dqossag3tja7n';
@@ -10,7 +11,8 @@ $header[] = "x-auth-token: $token";
 $apiData = array (
   'name' => $name,
   'email' => $email,
-  'phone' => $phone
+  'phone' => $phone,
+  'phonecc' => $phonecc
 );
 
 
